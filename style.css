@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --Light-red: rgb(255, 87, 87);
+  --Orangey-yellow: rgb(255, 176, 31);
+  --Green-teal: rgb(0, 189, 145);
+  --Cobalt-blue: rgb(17, 37, 212);
+
+  /* background */
+  --from-bg: hsl(252, 100%, 67%);
+  --to-bg: hsl(241, 81%, 54%);
+  /* //background// */
+
+  --from-circle: hsla(256, 72%, 46%, 1);
+  --to-circle: hsla(241, 72%, 46%, 0);
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+p {
+  font-size: 18px;
+}
+.container {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px auto;
+  box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.container .left {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: linear-gradient(var(--from-bg), var(--to-bg));
+}
+.container .left h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 30px auto 20px;
+  color: var(--Light-lavender);
+}
+.container .left div {
+  text-align: center;
+  background-image: linear-gradient(var(--from-circle), var(--to-circle));
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.container .left div p:first-child {
+  color: var(--White);
+  font-weight: 700;
+  font-size: 70px;
+  transform: translateY(24%);
+}
+.container .left div p {
+  color: rgba(200, 199, 255, 0.5);
+  font-size: 17px;
+  transform: translateY(32%);
+}
+.container .left h1 {
+  color: var(--White);
+  text-align: center;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.container .left > p {
+  color: var(--Light-lavender);
+  text-align: center;
+  font-weight: 500;
+  margin: 30px auto;
+  width: 75%;
+}
+.container .right {
+  width: 50%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+}
+.container .right h2 {
+  color: var(--Dark-gray-blue);
+  margin: 30px 30px 20px;
+}
+.container .right #right .itam {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 40px;
+  background-color: rgba(255, 87, 87, 0.07);
+  color: var(--Light-red);
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 700;
+}
+.container .right #right .itam:nth-child(2) {
+  background-color: rgba(255, 176, 31, 0.07);
+  color: var(--Orangey-yellow);
+}
+.container .right #right .itam:nth-child(3) {
+  background-color: rgba(0, 189, 145, 0.07);
+  color: var(--Green-teal);
+}
+.container .right #right .itam:nth-child(4) {
+  background-color: rgba(17, 37, 212, 0.07);
+  color: var(--Cobalt-blue);
+}
+.container .right #right .itam p:first-child img {
+  margin-right: 10px;
+}
+.container .right #right .itam p:last-child {
+  color: var(--Dark-gray-blue);
+}
+.container .right #right .itam p span {
+  opacity: 0.5;
+}
+.container .right button {
+  border: 0;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  margin: 0 40px;
+  width: 77%;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    flex-direction: column;
+  }
+  .container .left {
+    width: 100%;
+    height: 50%;
+    border-radius: 0 0 30px 30px;
+  }
+  .container .right {
+    width: 100%;
+    height: 60%;
+  }
+  .container .left div {
+    text-align: center;
+    background-image: linear-gradient(var(--from-circle), var(--to-circle));
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .container .left div p:first-child {
+    font-size: 94px;
+    transform: translateY(38px);
+  }
+  .container .left div p {
+    font-size: 24px;
+    transform: translateY(34px);
+  }
+  .container .right button {
+    border: 0;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    margin: 0 40px;
+    width: 85%;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

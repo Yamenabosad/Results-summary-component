@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h3>Your Result</h3>
+        <div>
+          <p>76</p>
+          <p>of 100</p>
+        </div>
+        <h1>Great</h1>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="right">
+        <h2>Summary</h2>
+        <div id="right">
+          <div class="itam">
+            <p><img src="" alt="" />Reaction</p>
+            <p>80 <span>/ 100</span></p>
+          </div>
+        </div>
+        <button>Continue</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let data = [
+      {
+        category: "Reaction",
+        score: 80,
+        icon: "./assets/images/icon-reaction.svg",
+      },
+      {
+        category: "Memory",
+        score: 92,
+        icon: "./assets/images/icon-memory.svg",
+      },
+      {
+        category: "Verbal",
+        score: 61,
+        icon: "./assets/images/icon-verbal.svg",
+      },
+      {
+        category: "Visual",
+        score: 72,
+        icon: "./assets/images/icon-visual.svg",
+      },
+    ];
+    document.getElementById("right").innerHTML =""
+    let index = 1
+    for (item of data){
+      document.getElementById("right").innerHTML +=
+      `
+        <div class="itam" id="div${index}">
+            <p><img src="${item.icon}" alt="" />${item.category}</p>
+            <p>${item.score} <span>/ 100</span></p>
+        </div>
+      `
+      index++
+    }
+  </script>
+</html>
